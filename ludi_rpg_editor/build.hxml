@@ -1,0 +1,13 @@
+-lib uuid
+
+-cp src
+
+-lib hx3compat
+-lib ludi-commons
+-lib ludi-forms
+-lib ludi-mind
+
+--js bin/main.js
+
+-main Main
+

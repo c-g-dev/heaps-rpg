@@ -1,0 +1,15 @@
+-cp core
+
+-lib heaps
+-lib hlsdl
+-lib format
+-lib ludi-commons:0.0.4
+-lib ludi-mind
+-lib heaps-feather-icons
+-lib heaps-coroutine
+-lib zip
+-lib deepnightLibs
+
+-hl build.hl
+
+-main Main

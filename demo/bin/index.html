@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Heaps Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <style>
+        body,html {
+            margin:0;
+            padding:0;
+            background-color:#0d0d0d;
+            width:100%;
+            height:100%;
+            color:#e0e0e0;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align:center;
+        }
+
+        h1 {
+            margin-top:25px;
+            margin-bottom:10px;
+            font-size:2rem;
+            color:#f1f1f1;
+        }
+
+        canvas#webgl {
+            width:960px;
+            height:640px;
+            display:block;
+            margin:20px auto 40px;
+            border:2px solid #444;
+            border-radius:6px;
+            box-shadow:0 0 15px rgba(0,0,0,0.8);
+        }
+
+        .section {
+            width:960px;
+            max-width:90%;
+            margin:0 auto 40px;
+            text-align:left;
+            line-height:1.6;
+        }
+
+        .section h2 {
+            margin-top:0;
+            color:#fff;
+            border-bottom:1px solid #444;
+            padding-bottom:5px;
+        }
+
+        .controls {
+            background:#1a1a1a;
+            border:1px solid #333;
+            border-radius:5px;
+            padding:15px;
+        }
+
+        .controls ul,
+        .about ul,
+        .about ol {
+            margin:0;
+            padding-left:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heaps RPG Demo</h1>
+    <canvas id="webgl"></canvas>
+
+    <div class="section controls">
+        <h2>Controls</h2>
+        <ul>
+            <li>Arrow keys to walk</li>
+            <li>Space to interact with the NPC (will cause him to reverse direction so you can corrale him around the map)</li>
+            <li>F1 - Show collision permissions</li>
+            <li>F2 - Show grid</li>
+            <li>F3 - Show current player position</li>
+        </ul>
+    </div>
+
+    <div class="section about">
+        <h2>About This Demo</h2>
+        <p>This is a demo of the heaps-rpg library, which is intended as a resource for build 2D topdown RPG games in Heaps.io.
+        The scope of the demo is the abilitiy to walk around an extremely barebones Palette Town from Pokemon Fire Red on the GBA.</p>
+
+        <p>Although you can't actually do much in the demo, it does showcase many complex features.</p>
+
+        <ol>
+            <li>Layer-based map rendering</li>
+            <li>Walking player</li>
+            <li>Lockable/Releaseable controls</li>
+            <li>Grid-based walking
+                <ul>
+                    <li>Grid-based walking with multiple entities, including tile reservation</li>
+                </ul>
+            </li>
+            <li>Collision permissions</li>
+            <li>Changing maps
+                <ul>
+                    <li>On step warping</li>
+                    <li>Custom warping workflows (i.e. trying to step on a door causes a chain of commands: lock player -> open door -> walk up -> fade out)</li>
+                </ul>
+            </li>
+            <li>Interacting with what the player is facing</li>
+        </ol>
+
+        <p>... and a lot of junk under the hood.</p>
+
+        <h3>Notably absent features currently:</h3>
+        <ol>
+            <li>Animated tilesets 
+                <p>- This can easily be added as a custom layer type, it just seemed like a lot of hassle to configure for the demo</p>
+            </li>
+            <li>Textboxes 
+                <p>- Yeah, textboxes are a huge subject... They are quite complex to implement and probably require custom implementations per-project. I have a heaps textbox/dialogue box library which I can share, and with this framework it should be easy to include any textbox no issue.</p>
+                <p>- Currently, as far as I'm concerned, this framework is BYOTB (bring your own textbox).</p>
+            </li>
+        </ol>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

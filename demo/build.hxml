@@ -1,0 +1,18 @@
+-cp src
+-cp ../core
+-cp ../modules
+
+
+
+-lib heaps
+-lib format
+-lib ludi-commons:0.0.4
+-lib ludi-mind
+-lib heaps-feather-icons
+-lib heaps-coroutine
+-lib zip
+-lib deepnightLibs
+
+-js bin/game.js
+
+-main Main
