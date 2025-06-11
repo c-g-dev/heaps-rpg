@@ -42,5 +42,5 @@ s2d.addChild(world.viewport);
 world.setMap("overworld");
 ```
 
-Check the demo code for detailed examples.
+No detailed docs yet, but you can check the demo code for detailed examples.
 
